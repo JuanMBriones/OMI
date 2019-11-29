@@ -1,0 +1,40 @@
+#include <bits/stdc++.h>
+#define opt_io ios_base::sync_with_stdio(0);cin.tie(0);
+using namespace std;
+
+int main() {
+    opt_io
+    int n, i, j, iM, im;
+    cin >> n;
+    while(n!=-1) {
+        int x[n][3], temp[n], temp2[n];
+        string nom[n];
+        for(i=0; i<n; i++) {
+            temp[i] = 1;
+            for(j=0; j<3; j++) {
+                cin >> x[i][j];
+                temp[i] *= x[i][j];
+                temp2[i] = temp[i];
+            }  
+            cin >> nom[i];
+        }
+        sort(temp2, temp2+n);
+        for(i=0; i<n; i++) {
+            if(temp2[0]==temp[i]) {
+                im = i;
+                break;
+            }    
+        }
+        int t = (n-1);
+        for(i=0; i<n; i++) {
+            if(temp2[t]==temp[i]) {
+                iM = i;
+                break;
+            }    
+        }
+        cout << nom[iM] << " took clay from " << nom[im] << "." << "\n";
+        cin >> n;
+    }
+    cin.get();
+    return 0;  
+}

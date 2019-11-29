@@ -1,0 +1,15 @@
+#include <iostream>
+#include <algorithm>
+
+using namespace std;
+
+int main() {
+    int x[10], i;
+    for(i=0; i<10; i++) {
+        cin >> x[i];    
+    }
+    auto result = minmax_element(x, x+10);
+    cout << *result.first << " " << (result.first-x) << endl;
+    cin.get();
+    return 0;
+}

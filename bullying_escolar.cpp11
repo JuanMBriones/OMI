@@ -1,0 +1,32 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main() {
+    int i, n, x, y, z, v;
+    string name, mini, maxi;
+    map<string, int> kids;
+    cin >> n;
+    while(n!=-1) {
+        for(i=0; i<n; i++) {
+            v = 1;
+            cin >> x >> y >> z;
+            v = x*y*z;
+            cin >> name;
+            kids[name] = v;
+            if(i==0) {
+                mini = maxi = name;
+            }
+            if(v>kids[maxi]) {
+                maxi = name;
+            }
+            if(v<kids[mini]) {
+                mini = name;
+            }
+        }
+        cout << maxi << " took clay from " << mini << ".\n";
+        cin >> n;
+    }
+    cin.get();
+    return 0;
+}

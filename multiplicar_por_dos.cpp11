@@ -1,0 +1,38 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+inline bool esRazonInt(int a, int b) {
+    return (((((int)(a/b))*b)==a)? 1:0);
+}
+
+inline bool esInt(float n) {
+    return ((((int)n)==n)? 1:0);
+}
+
+inline bool esP2(int a, int b) {
+    if(esRazonInt(a, b)) {
+        float logRazon = log2(a/b);
+        return ((esInt(logRazon))? 1:0);
+    }
+    else if(esRazonInt(b, a)) {
+        float logRazon = log2(b/a);
+        return ((esInt(logRazon))? 1:0);
+    }
+    else {
+        return 0;    
+    }
+}
+
+int main() {
+    int a, b;
+    cin >> a >> b;
+    if(a==b || esP2(a, b)) {
+        cout << "felizmil" << endl;  
+    }
+    else {
+        cout << "tristemil" << endl;    
+    }
+    cin.get();
+    return 0;
+}

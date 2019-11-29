@@ -1,0 +1,16 @@
+#include <bits/stdc++.h>
+#define opt_io cin.tie(0);ios_base::sync_with_stdio(0);
+
+using namespace std;
+
+int main() {
+	opt_io
+	int i, x[8];
+	for(i=0; i<8; i++) {
+		cin >> x[i];
+	}
+	sort(x, x+8);
+	cout << x[0] << " " << x[7] << " " << x[7]-x[0] << endl;
+	cin.get();
+	return 0;
+}

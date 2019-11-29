@@ -1,0 +1,18 @@
+#include <iostream>
+#include <algorithm>
+
+using namespace std;
+
+int main() {
+    int n, x = 1, ant = 1, t;
+    cin >> n;
+    while(x<n) {
+        cout << x << " ";
+        t = x;
+        x += ant;
+        ant = t;
+    }
+    cout << endl;
+    cin.get();
+    return 0;
+}

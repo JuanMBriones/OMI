@@ -1,0 +1,42 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main() {
+	int flag = 0;
+	unsigned int n, m, mayor = 1, max_length, i;
+	while(cin >> n >> m) {
+		cout << n << " " << m << " ";
+		if(n>m) {
+			int t = n;
+			n =	m;
+			m = t;
+		}
+		while(n<=m) {
+			i = n;
+			mayor=1; 
+			while(i!=1) {
+				if((i%2)==0) {
+					i /= 2;
+				}
+				else {
+					i *= 3; 
+					i++;
+				}
+				mayor++;
+			}
+			if(flag==0) {
+				flag++;
+				max_length = mayor;
+			}
+			else if(mayor>max_length) {
+				max_length = mayor;
+			}
+			n++;
+		}
+		flag--;
+		cout << max_length << endl;
+	}
+	cin.get();
+	return 0;
+}

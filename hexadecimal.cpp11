@@ -1,0 +1,11 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+	int i = 0;
+	cin >> i;
+	cout << hex << i << endl;
+	cin.get();
+	return 0;
+}

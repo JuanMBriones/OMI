@@ -1,0 +1,21 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main() {
+    int n, m;
+    cin >> n >> m;
+    if((m%2)==0) {
+       m /= 2;
+       m--;
+       m = n-m;
+    }
+    else {
+       m--;
+       m /= 2;
+       m++;
+    }
+    cout << m << endl;
+    cin.get();
+    return 0;
+}

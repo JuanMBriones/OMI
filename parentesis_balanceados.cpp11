@@ -1,0 +1,70 @@
+#include <iostream>
+#include <stack>
+#include <string>
+#include <cstdio>
+
+using namespace std;
+
+int main() {
+    int i, n;
+    cin >> n;
+    cin.ignore(1);
+    stack<char> ver;
+    for(int it=0; it<n; it++) {
+        string s;
+        getline(cin, s);
+        int bP = 0, bC = 0, bL = 0;
+        for(i=0; i<s.size(); i++) {
+            if(s[i]=='(') {
+                ver.push(')');
+                bP++;
+            }
+            else if(s[i]=='{') {
+                ver.push('}');
+                bL++;
+            }
+            else if(s[i]=='}') {
+                if(bL>0 && ver.top()=='}') {
+                    ver.pop();
+                    bL--;
+                }
+                else {
+                    cout << "NO\n";
+                    break;
+                }
+            }
+            else if(s[i]=='[') {
+                ver.push(']');
+                bC++;
+            }
+            else if(s[i]==']') {
+                if(bC>0 && ver.top()==']') {
+                    ver.pop();
+                    bC--;
+                }
+                else {
+                    cout << "NO\n";
+                    break;
+                }
+            }
+            else if(s[i]==')') {
+                if(bP>0 && ver.top()==')') {
+                    ver.pop();
+                    bP--;
+                }
+                else {
+                    cout << "NO\n";
+                    break;
+                }
+            }
+        }
+        if(i==s.size() && bP==0 && bC==0 && bL==0) {
+            cout << "SI\n";
+        }
+        else if(i==s.size()) {
+            cout << "NO\n";
+        }
+    }
+    cin.get();
+    return 0;
+}

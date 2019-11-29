@@ -1,0 +1,16 @@
+#include "cluedo.h"
+
+// Main
+//	int Teoria(int c, int u, int a)
+
+void ResolverCaso() {
+	// FIXME
+
+    int resp[4] = {0, 1, 1, 1};
+    int i = Teoria(resp[1], resp[2], resp[3]);
+    while(i!=0) {
+        resp[i]++;
+        i = Teoria(resp[1], resp[2], resp[3]);
+    }
+    return;
+}

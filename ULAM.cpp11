@@ -1,0 +1,22 @@
+#include <iostream>
+#include <cstdio>
+
+using namespace std;
+
+int main() {
+	int num = 0;
+	cin >> num;
+	while(num!=1) {
+		printf("%d ", num);
+		if((num%2)==0) {
+			num /= 2;
+		}
+		else {
+			num *= 3;
+			num++;
+		}
+	}	
+	printf("1");
+	cin.get();
+	return 0;
+}

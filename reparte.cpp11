@@ -1,0 +1,15 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main() {
+	int n, p, t, x = 0;
+	cin >> p >> n;
+	for(n; n>0; n--) {
+		cin >> t; 
+		x += t;
+	}
+	printf("%d %d\n", (x/p), (x%p));
+	cin.get();
+	return 0;
+}

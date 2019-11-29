@@ -1,0 +1,44 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+// 0 48
+int main() {
+    int n, i, x[10], y[10], z[3];
+    string s;
+    char c;
+    cin >> c >> s;
+    for(i=0; i<10; i++) {
+        cin >> x[i] >> y[i];
+    }
+    if(c=='A') {
+        for(i=0; i<10; i++) {
+            if(y[i]==(s[0]-48)) {
+                z[0] = x[i];
+            }
+            if(y[i]==(s[1]-48)) {
+                z[1] = x[i];
+            }
+            if(y[i]==(s[2]-48)) {
+                z[2] = x[i];
+            }
+        }
+    }
+    else {
+        for(i=0; i<10; i++) {
+            if(x[i]==(s[0]-48)) {
+                z[0] = y[i];
+            }
+            if(x[i]==(s[1]-48)) {
+                z[1] = y[i];
+            }
+            if(x[i]==(s[2]-48)) {
+                z[2] = y[i];
+            }
+        }
+    }
+    cout << z[0] << z[1] << z[2] << endl;
+    //cout << (int)c << endl;
+    cin.get();
+    return 0;
+}

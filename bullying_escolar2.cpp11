@@ -1,0 +1,48 @@
+#include <iostream>
+#include <string.h>
+
+using namespace std;
+
+struct persona {
+    string nombre;
+    int volumen;
+};
+
+int main() {
+    int n, i;
+    cin >> n;
+    while(n!=-1) {
+        persona ninos[n];
+        int max, min, a, maxi, mini;
+        for(i=0; i<n; i++) {
+            int t = 1;
+            cin >> a;
+            t *= a;
+            cin >> a;
+            t *= a;
+            cin >> a;
+            t *= a;
+            cin >> ninos[i].nombre;
+            ninos[i].volumen = t;
+            if(i==0) {
+                max = t;
+                min = t;
+                mini = i;
+                maxi = i;
+            }
+            else if(t>max) {
+                max = t;
+                maxi = i;
+            }
+            else if(t<min) {
+                min = t;
+                mini = i;
+            }
+            
+        }
+        cout << ninos[maxi].nombre << " took clay from " << ninos[mini].nombre << ".\n";
+        cin >> n;
+    }
+    cin.get();
+    return 0;
+}

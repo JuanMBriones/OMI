@@ -1,0 +1,63 @@
+//
+//  Main2.cpp
+//  Cpp
+//
+//  Created by John Gates on 22/02/16.
+//  Copyright © 2016 John Gates. All rights reserved.
+//
+#include <iostream>
+//#include <string.h>
+
+/*#include <iostream>
+#include <string>
+#include <sstream>*/
+
+using namespace std;
+
+// 9    4 6 7
+// double pi = 2*acos(0);
+/*
+int st2int(const string &st) {
+    istringstream iss(st);
+    int num;
+    iss >> num;
+    return num;
+}
+
+string int2st(int n) {
+    ostringstream oss;
+    oss << n;
+    return oss.str();
+}
+*/
+
+int main() {
+    //string c(4, 'e'); // eeee
+    //cout << c << endl;
+    int n, m, i, j;
+    cin >> n >> m;
+    for(i=0; i<n; i++) {
+        if((i+1)%2==1) {
+            for(j=0; j<m; j++) {
+                cout << "#";
+            }
+        }
+        else {
+            if((i+1)%4==0) {
+                cout << "#";
+                for(j=1; j<m; j++) {
+                    cout << ".";
+                }
+            }
+            else {
+                for(j=1; j<m; j++) {
+                    cout << ".";
+                }
+                cout << "#";
+            }
+        }
+        cout << endl;
+    }
+    cin.get();
+    return 0;
+}

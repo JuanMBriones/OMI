@@ -1,0 +1,35 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int N = 0, M = 0, Minutos = 0, temp;
+    cin >> N;
+    cin >> M;
+    if(N>M) {
+        Minutos += (N/M);
+        N -= Minutos*M;
+    }
+    else {
+        Minutos += (M/N);
+        M -= Minutos*N;
+    }
+	while(true) {
+            if(N==0 || M==0) {
+                break;
+            }
+            if(N>M) {
+                Minutos++;
+                temp = N-M;
+                N = temp;
+            }
+            else {
+                Minutos++;
+                temp = M-N;
+                M = temp;
+            }
+    }
+    cout << Minutos << endl;
+    cin.get();
+    return 0;
+}

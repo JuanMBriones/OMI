@@ -1,0 +1,30 @@
+#include <iostream>
+#define opt_io cin.tie(0);ios_base::sync_with_stdio(0);
+
+using namespace std;
+
+int main() {
+	//opt_io
+    int n, i, i1, i2, i3;
+    cin >> n;
+    cin >> i1;
+    if(i1==n) {
+    	cout << "Bienvenido" << endl;
+    	return 0;
+    }
+    cin >> i2;
+    if(i2==n) {
+    	cout << "Bienvenido" << endl;
+    	return 0;
+    }
+    cin >> i3;
+    if(i3==n) {
+    	cout << "Bienvenido" << endl;
+    	return 0;
+    }
+    else {
+    	cout << "Gracias por Participar" << endl;
+    }
+    cin.get();
+    return 0;
+}

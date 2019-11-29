@@ -1,0 +1,18 @@
+#include <bits/stdc++.h>
+#define opt_io ios_base::sync_with_stdio(0);cin.tie(0);
+
+using namespace std;
+
+int main() {
+    opt_io
+    int a, b;
+    cin >> a >> b;
+    if(a%2) {
+        a++;
+    }
+    for(a; a<=b; a+=2) {
+        cout << a << endl;
+    }
+    cin.get();
+    return 0;
+}

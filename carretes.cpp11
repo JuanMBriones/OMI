@@ -1,0 +1,24 @@
+#include <bits/stdc++.h>
+#define opt_io cin.tie(0);ios_base::sync_with_stdio(0);
+
+using namespace std;
+
+int main() {
+    opt_io
+    //cout << (int)'0' << endl; // 0 -> 48
+    int i, n, steps = 0;
+    string a, b;
+    cin >> n >> a >> b;
+    for(i=0; i<n; i++) {
+        int tA = (int)a[i], tB = (int)b[i];
+        if(abs(tA-tB)>5) {
+            steps += 10-abs(tA-tB);
+        }
+        else {
+            steps += abs(tA-tB);
+        }
+    }
+    cout << steps << endl;
+    cin.get();
+    return 0;
+}

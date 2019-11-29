@@ -1,0 +1,19 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+  int anno, mes, dia;
+  cin >> anno >> mes >> dia;
+  
+      if(mes>2 || (dia>12 && mes==2)) {
+        cout << 2015-anno-1 << endl;
+      }
+      else if(anno<=2015) {
+        cout << 2015-anno << endl;
+      }
+  
+  
+  cin.get();
+  return 0;
+}
