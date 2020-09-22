@@ -1,4 +1,4 @@
-#OMI
+# OMI
 
 Some competitive programming problems that I've been solving through the time
 
